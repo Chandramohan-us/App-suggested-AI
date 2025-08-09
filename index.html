@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StudyBuddy — AI Study Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="logo neon">StudyBuddy</div>
+      <nav class="actions">
+        <button id="examplesBtn" class="pill">Examples</button>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="left">
+        <h1 class="neon-head">Complete any assignment — fast.</h1>
+        <p class="muted">Search your question and StudyBuddy suggests step-by-step approaches, code snippets, summaries, and sources — powered by Gemini AI.</p>
+
+        <div class="searchCard">
+          <textarea id="query" placeholder="Type your assignment / question here (e.g. 'implement quicksort in python with explanation')"></textarea>
+          <div class="controls">
+            <select id="mode">
+              <option value="explain">Explain & Steps</option>
+              <option value="code">Code + Explanation</option>
+              <option value="resources">Resources & Links</option>
+              <option value="essay">Write Essay / Report</option>
+            </select>
+            <button id="askBtn" class="btn neon-btn">Ask StudyBuddy</button>
+          </div>
+          <small class="hint">Pro tip: be specific. Add language or format e.g., "in JavaScript" or "5 step plan".</small>
+        </div>
+      </div>
+
+      <aside class="right">
+        <div class="card neon-card">
+          <h3>Live results</h3>
+          <div id="results" class="results">No query yet. Try the examples.</div>
+        </div>
+
+        <div class="card tips">
+          <h4>Quick examples</h4>
+          <ul>
+            <li>“Create a 500-word essay on climate change with citations”</li>
+            <li>“Design DB schema for a library system (ER + tables)”</li>
+            <li>“Summarize chapter 3 of Introduction to Algorithms”</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="footer">
+      <small>Made with ❤️ — Deploy frontend on GitHub Pages. Backend must be hosted (Vercel/Render) to keep the Gemini key private.</small>
+    </footer>
+  </main>
+
+  <template id="loadingT">
+    <div class="loading">
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    </div>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
